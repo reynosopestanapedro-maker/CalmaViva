@@ -448,8 +448,9 @@
     .product-img {
       height: 220px;
       width: 100%;
-      object-fit: cover;
-      background: #f8f8f8;
+      object-fit: contain;
+      padding: 15px;
+      background: #fafafa;
     }
 
     .product-info {
@@ -483,7 +484,7 @@
 
     .product-price {
       font-weight: 700;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: var(--primary-dark);
     }
 
@@ -781,7 +782,7 @@
       <div class="controls-bar">
         <div class="search-box">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="search-input" placeholder="Buscar por producto o síntoma (ej: Oleo 31, Lavanda)..." onkeyup="filterProducts()">
+          <input type="text" id="search-input" placeholder="Buscar por producto o síntoma (ej: Óleo 31, Lavanda)..." onkeyup="filterProducts()">
         </div>
 
         <div class="category-filters">
@@ -870,63 +871,63 @@
     const products = [
       {
         id: 1,
-        title: "Oleo 31 (20ml / 50ml)",
-        category: "botiquín",
+        title: "Óleo 31 (20 ml)",
+        category: "botiquin",
         symptom: ["estres", "dolor"],
-        desc: "Mezcla de 31 aceites esenciales. Minimiza tensiones, calma dolores de cabeza y molestias musculares.",
-        price: "Consultar precio vigente",
-        tag: "Más vendido",
-        img: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600"
+        desc: "¿Tensión? ¿Dolor de cabeza? Mediante el masaje relaja, devolviendo la energía y la agilidad naturales del cuerpo. Afloja tensiones musculares y potenciar la acción de otros productos Just.",
+        price: "$78.100",
+        tag: "Best seller",
+        img: "https://www.justargentina.com/images/products/3000.jpg"
       },
       {
         id: 2,
-        title: "Aceite Esencial de Lavanda",
+        title: "Aceite Esencial de Lavanda (10 ml)",
         category: "aceites",
-        symptom: ["estres", "dormir"],
-        desc: "El aceite de la calma y relajación. Excelente para combatir el estrés, insomnio y la ansiedad.",
-        price: "Consultar precio vigente",
-        tag: "Relajación",
-        img: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&q=80&w=600"
+        symptom: ["estres", "dormir", "piel"],
+        desc: "Relajación. Aroma floral, fresco y herbal. Calma y aquieta los nervios, la ansiedad y el estrés ayudando a conciliar el sueño. Ideal para reconfortar la piel en caso de quemaduras o eczemas.",
+        price: "$58.500",
+        tag: "Best seller",
+        img: "https://www.justargentina.com/images/products/1010.jpg"
       },
       {
         id: 3,
-        title: "Eucasol (Spray de Eucalipto)",
+        title: "Eucasol - Spray de Eucalipto (75 ml)",
         category: "respiratorio",
         symptom: ["respirar", "dormir"],
-        desc: "Spray con aceites de eucalipto. Despeja las vías respiratorias, alivia los rinitis y mejora el descanso.",
-        price: "Consultar precio vigente",
-        tag: "Favorito",
-        img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=600"
+        desc: "Siente el placer de respirar libremente. Enriquecido con aceites esenciales refrescantes. Rociado en almohada, pañuelo o ambiente, despeja, purifica y aromatiza.",
+        price: "$78.200",
+        tag: "Best seller",
+        img: "https://www.justargentina.com/images/products/3600.jpg"
       },
       {
         id: 4,
-        title: "Crema de Tomillo",
+        title: "Crema de Tomillo (25 g)",
         category: "respiratorio",
         symptom: ["respirar"],
-        desc: "Tranquiliza la tos, descongestiona el pecho y reconforta los estados gripales y de frío.",
-        price: "Consultar precio vigente",
-        tag: "Invierno / Cuidados",
-        img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600"
+        desc: "Que nada te oprima el pecho. Masaje en pecho, cuello, espalda y planta de los pies. Relaja las tensiones del pecho e incomodidades del invierno.",
+        price: "$25.000",
+        tag: "Best seller",
+        img: "https://www.justargentina.com/images/products/5558.jpg"
       },
       {
         id: 5,
-        title: "Aceite Esencial Tea Tree",
+        title: "Aceite Esencial de Tea Tree, Manuca y Rosalina (10 ml)",
         category: "botiquin",
         symptom: ["piel"],
-        desc: "Antiséptico natural. Ideal para irritaciones de la piel, acné, picaduras y regenerar tejidos.",
-        price: "Consultar precio vigente",
+        desc: "Regenera. Propiedades desinfectantes, desinflamatorias, analgésicas y cicatrizantes. Cuida la piel de manera efectiva y delicada.",
+        price: "$94.500",
         tag: "Regenerador",
-        img: "https://images.unsplash.com/photo-1608571424266-edeb9bbefdec?auto=format&fit=crop&q=80&w=600"
+        img: "https://www.justargentina.com/images/products/4110.jpg"
       },
       {
         id: 6,
-        title: "Bálsamo para el Cuerpo (Arnica)",
+        title: "Bálsamo - Loción Corporal con Árnica y Hamamelis (45 ml)",
         category: "botiquin",
         symptom: ["dolor"],
-        desc: "Activa la circulación, previene picaduras y reconforta golpes, calambres y contracturas.",
-        price: "Consultar precio vigente",
-        tag: "Alivio Rápido",
-        img: "https://images.unsplash.com/photo-1519735777090-ec97162dc266?auto=format&fit=crop&q=80&w=600"
+        desc: "Confort instantáneo siempre a mano. Fricción vigorizante que estimula la circulación evitando moretones. Reconforta molestias por golpes y picaduras de insectos.",
+        price: "$14.000",
+        tag: "Best seller",
+        img: "https://www.justargentina.com/images/products/5509.jpg"
       }
     ];
 
@@ -948,7 +949,7 @@
         card.className = 'product-card';
         card.innerHTML = `
           <span class="product-tag">${prod.tag}</span>
-          <img src="${prod.img}" alt="${prod.title}" class="product-img">
+          <img src="${prod.img}" alt="${prod.title}" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600'">
           <div class="product-info">
             <h3 class="product-title">${prod.title}</h3>
             <p class="product-desc">${prod.desc}</p>
@@ -984,7 +985,9 @@
 
     function filterBySymptom(symptomKey) {
       document.querySelectorAll('.symptom-card').forEach(c => c.classList.remove('active'));
-      event.currentTarget.classList.add('active');
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
 
       const filtered = products.filter(p => p.symptom && p.symptom.includes(symptomKey));
       renderProducts(filtered);
@@ -1049,9 +1052,9 @@
       }
 
       const phone = "5493536573061";
-      let message = "Hola María Jorgelina! Quisiera consultar la disponibilidad y precios de los siguientes productos de Calma Viva:\n\n";
+      let message = "Hola María Jorgelina! Quisiera consultar los siguientes productos de Calma Viva:\n\n";
       cart.forEach((item, i) => {
-        message += `${i + 1}. ${item.title}\n`;
+        message += `${i + 1}. ${item.title} (${item.price})\n`;
       });
       message += "\n¡Muchas gracias!";
 
