@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calma Viva | Consultora Oficial Swiss Just - María Jorgelina Pestaña</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #7c5295;
+      --primary-dark: #5e3b73;
+      --primary-light: #f3eef8;
+      --secondary: #4a7c59;
+      --secondary-light: #eaf2eb;
+      --accent: #d8a47f;
+      --bg-color: #faf7f5;
+      --card-bg: #ffffff;
+      --text-main: #333333;
+      --text-muted: #666666;
+      --border-color: #e5dec9;
+      --shadow: 0 10px 30px rgba(124, 82, 149, 0.08);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, .brand-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .top-bar a {
+      color: #ffe6a7;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+
+    /* Header */
+    header {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+      border-bottom: 1px solid rgba(124, 82, 149, 0.1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #e0c3fc 0%, #8ec5fc 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-dark);
+      font-size: 1.5rem;
+      border: 2px solid var(--primary-light);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo-text h1 {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      line-height: 1.1;
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btn-cart {
+      position: relative;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-cart:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .cart-count {
+      background: var(--primary-dark);
+      color: white;
+      font-size: 0.75rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-cart:hover .cart-count {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(250, 247, 245, 0.85), rgba(250, 247, 245, 0.92)), 
+                  url('https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+      padding: 80px 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--secondary-light);
+      color: var(--secondary);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      color: #2b2b2b;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .consultant-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      box-shadow: var(--shadow);
+      margin-bottom: 25px;
+      border: 1px solid var(--primary-light);
+    }
+
+    .consultant-tag i {
+      color: var(--primary);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(124, 82, 149, 0.3);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(124, 82, 149, 0.4);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: #1da851;
+      transform: translateY(-2px);
+    }
+
+    /* Interactive Helper Tool */
+    .interactive-guide {
+      background: white;
+      margin: -40px auto 60px;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 10;
+      border: 1px solid rgba(124, 82, 149, 0.1);
+    }
+
+    .guide-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .guide-title h3 {
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+    }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+    }
+
+    .symptom-card {
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 15px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .symptom-card:hover, .symptom-card.active {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .symptom-card i {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .symptom-card span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* Catalog Section */
+    .catalog-section {
+      padding: 40px 0 80px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: var(--primary-dark);
+    }
+
+    /* Search & Filter Bar */
+    .controls-bar {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 20px 12px 45px;
+      border-radius: 30px;
+      border: 1px solid #ddd;
+      outline: none;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      background: white;
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(124, 82, 149, 0.15);
+    }
+
+    .search-box i {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .category-filters {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+
+    .filter-btn {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0,0,0,0.03);
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(124, 82, 149, 0.15);
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(5px);
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      z-index: 2;
+    }
+
+    .product-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      background: #f8f8f8;
+    }
+
+    .product-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-title {
+      font-size: 1.25rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .product-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+      flex: 1;
+    }
+
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 15px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .product-price {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+    }
+
+    .btn-add {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-add:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Modal / Drawer for Cart */
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 100%;
+      max-width: 400px;
+      height: 100vh;
+      background: white;
+      box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+      z-index: 2000;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-drawer.open {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 20px;
+      background: var(--primary-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-header h3 {
+      color: var(--primary-dark);
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .cart-body {
+      padding: 20px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cart-item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .cart-item-price {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .cart-footer {
+      padding: 20px;
+      background: #fafafa;
+      border-top: 1px solid #eee;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.4);
+      z-index: 1500;
+      display: none;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* About Section */
+    .about-section {
+      background: white;
+      padding: 70px 0;
+      border-top: 1px solid #eee;
+    }
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 2.1rem;
+      }
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Footer */
+    footer {
+      background: #231b28;
+      color: white;
+      padding: 60px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #e0c3fc;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #b3a8ba;
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+      color: #8a7e93;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    🌸 Asesoramiento personalizado Swiss Just — Envíos a todo el país. 
+    <a href="https://www.justargentina.com/tienda/11006285" target="_blank">Visitar Tienda Oficial Just</a>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo-box">
+        <div class="logo-img">
+          <i class="fa-solid fa-spa"></i>
+        </div>
+        <div class="logo-text">
+          <h1>Calma Viva</h1>
+          <p>Bienestar Natural</p>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <button class="btn-cart" onclick="toggleCart()">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Mi Pedido</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="hero-badge"><i class="fa-solid fa-leaf"></i> Productos Naturales Suizos</span>
+      <h2>Encontrá la calma, alivio y frescura que tu cuerpo necesita</h2>
+      
+      <div class="consultant-tag">
+        <i class="fa-solid fa-user-check"></i>
+        <span>Consultora Independiente: <strong>María Jorgelina Pestaña</strong></span>
+      </div>
+
+      <p>Te acompaño a elegir la mejor alternativa natural para transformar tus días.</p>
+
+      <div class="hero-buttons">
+        <a href="#catalogo" class="btn-primary"><i class="fa-solid fa-store"></i> Ver Productos</a>
+        <a href="https://wa.me/5493536573061?text=Hola%20Maria%20Jorgelina,%20quisiera%20recibir%20asesoramiento%20de%20productos%20Just" target="_blank" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Interactive Helper Tool -->
+    <div class="interactive-guide">
+      <div class="guide-title">
+        <h3>¿Qué necesitás hoy?</h3>
+        <p>Hacé clic en tu síntoma o búsqueda y te recomendamos la mejor opción:</p>
+      </div>
+
+      <div class="symptom-grid">
+        <div class="symptom-card" onclick="filterBySymptom('estres')">
+          <i class="fa-solid fa-brain"></i>
+          <span>Estrés / Cansancio</span>
+        </div>
+        <div class="symptom-card" onclick="filterBySymptom('dolor')">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Tensiones / Dolores</span>
+        </div>
+        <div class="symptom-card" onclick="filterBySymptom('respirar')">
+          <i class="fa-solid fa-wind"></i>
+          <span>Respirar mejor</span>
+        </div>
+        <div class="symptom-card" onclick="filterBySymptom('piel')">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <span>Cuidado Piel</span>
+        </div>
+        <div class="symptom-card" onclick="filterBySymptom('dormir')">
+          <i class="fa-solid fa-moon"></i>
+          <span>Sueño / Relax</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Catalog Section -->
+    <section id="catalogo" class="catalog-section">
+      <div class="section-header">
+        <div>
+          <h2>Catálogo Destacado</h2>
+          <p>Línea completa para tu botiquín natural y bienestar diario</p>
+        </div>
+      </div>
+
+      <!-- Controls Bar -->
+      <div class="controls-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Buscar por producto o síntoma (ej: Oleo 31, Lavanda)..." onkeyup="filterProducts()">
+        </div>
+
+        <div class="category-filters">
+          <button class="filter-btn active" onclick="setCategory('all', this)">Todos</button>
+          <button class="filter-btn" onclick="setCategory('aceites', this)">Aceites Esenciales</button>
+          <button class="filter-btn" onclick="setCategory('botiquin', this)">Botiquín Natural</button>
+          <button class="filter-btn" onclick="setCategory('respiratorio', this)">Respiratorio</button>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="product-grid">
+        <!-- Products populated by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container about-container">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800" alt="Bienestar Just" class="about-img">
+      <div>
+        <span class="hero-badge">Atención Personalizada</span>
+        <h2>Hola, soy María Jorgelina Pestaña</h2>
+        <p style="margin-bottom: 15px; color: var(--text-muted);">Como consultora oficial Swiss Just al frente de <strong>Calma Viva</strong>, mi propósito es ayudarte a encontrar el equilibrio y la frescura corporal que necesitás a través del poder de los aceites esenciales y preparados naturales.</p>
+        <p style="margin-bottom: 25px; color: var(--text-muted);">Si tenés dudas sobre qué producto es el ideal para vos o tu familia, escribime por WhatsApp y lo vemos juntas.</p>
+        <a href="https://wa.me/5493536573061" target="_blank" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Contactar a María Jorgelina
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Calma Viva</h4>
+          <p>Tu espacio de bienestar, frescura y alivio con la calidad suiza de Swiss Just.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/calmaviva.esencial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/5493536573061" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <p><i class="fa-solid fa-user"></i> María Jorgelina Pestaña</p>
+          <p><i class="fa-solid fa-phone"></i> +54 9 3536 57-3061</p>
+          <p><i class="fa-solid fa-globe"></i> Tienda Oficial Just Argentina</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces Útiles</h4>
+          <a href="https://www.justargentina.com/tienda/11006285" target="_blank">Tienda Oficial Just</a>
+          <a href="https://www.instagram.com/calmaviva.esencial/" target="_blank">Instagram @calmaviva.esencial</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; Calma Viva — Consultora Independiente Swiss Just (María Jorgelina Pestaña). Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Mi Consulta de Productos</h3>
+      <button class="close-cart" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-items">
+      <p style="text-align: center; color: var(--text-muted); margin-top: 30px;">Tu lista de consulta está vacía.</p>
+    </div>
+    <div class="cart-footer">
+      <button class="btn-whatsapp" style="width: 100%; justify-content: center;" onclick="sendWhatsAppOrder()">
+        <i class="fa-brands fa-whatsapp"></i> Consultar lista por WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Products Data
+    const products = [
+      {
+        id: 1,
+        title: "Oleo 31 (20ml / 50ml)",
+        category: "botiquín",
+        symptom: ["estres", "dolor"],
+        desc: "Mezcla de 31 aceites esenciales. Minimiza tensiones, calma dolores de cabeza y molestias musculares.",
+        price: "Consultar precio vigente",
+        tag: "Más vendido",
+        img: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        id: 2,
+        title: "Aceite Esencial de Lavanda",
+        category: "aceites",
+        symptom: ["estres", "dormir"],
+        desc: "El aceite de la calma y relajación. Excelente para combatir el estrés, insomnio y la ansiedad.",
+        price: "Consultar precio vigente",
+        tag: "Relajación",
+        img: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        id: 3,
+        title: "Eucasol (Spray de Eucalipto)",
+        category: "respiratorio",
+        symptom: ["respirar", "dormir"],
+        desc: "Spray con aceites de eucalipto. Despeja las vías respiratorias, alivia los rinitis y mejora el descanso.",
+        price: "Consultar precio vigente",
+        tag: "Favorito",
+        img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        id: 4,
+        title: "Crema de Tomillo",
+        category: "respiratorio",
+        symptom: ["respirar"],
+        desc: "Tranquiliza la tos, descongestiona el pecho y reconforta los estados gripales y de frío.",
+        price: "Consultar precio vigente",
+        tag: "Invierno / Cuidados",
+        img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        id: 5,
+        title: "Aceite Esencial Tea Tree",
+        category: "botiquin",
+        symptom: ["piel"],
+        desc: "Antiséptico natural. Ideal para irritaciones de la piel, acné, picaduras y regenerar tejidos.",
+        price: "Consultar precio vigente",
+        tag: "Regenerador",
+        img: "https://images.unsplash.com/photo-1608571424266-edeb9bbefdec?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        id: 6,
+        title: "Bálsamo para el Cuerpo (Arnica)",
+        category: "botiquin",
+        symptom: ["dolor"],
+        desc: "Activa la circulación, previene picaduras y reconforta golpes, calambres y contracturas.",
+        price: "Consultar precio vigente",
+        tag: "Alivio Rápido",
+        img: "https://images.unsplash.com/photo-1519735777090-ec97162dc266?auto=format&fit=crop&q=80&w=600"
+      }
+    ];
+
+    let cart = [];
+    let currentCategory = 'all';
+
+    // Render Products
+    function renderProducts(itemsToRender) {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = '';
+
+      if (itemsToRender.length === 0) {
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">No se encontraron productos que coincidan con tu búsqueda.</p>';
+        return;
+      }
+
+      itemsToRender.forEach(prod => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <span class="product-tag">${prod.tag}</span>
+          <img src="${prod.img}" alt="${prod.title}" class="product-img">
+          <div class="product-info">
+            <h3 class="product-title">${prod.title}</h3>
+            <p class="product-desc">${prod.desc}</p>
+            <div class="product-footer">
+              <span class="product-price">${prod.price}</span>
+              <button class="btn-add" onclick="addToCart(${prod.id})" title="Sumar a mi consulta">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter Logic
+    function filterProducts() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      const filtered = products.filter(p => {
+        const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+        const matchesQuery = p.title.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+        return matchesCategory && matchesQuery;
+      });
+      renderProducts(filtered);
+    }
+
+    function setCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterProducts();
+    }
+
+    function filterBySymptom(symptomKey) {
+      document.querySelectorAll('.symptom-card').forEach(c => c.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      const filtered = products.filter(p => p.symptom && p.symptom.includes(symptomKey));
+      renderProducts(filtered);
+      
+      document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Cart System
+    function addToCart(id) {
+      const prod = products.find(p => p.id === id);
+      cart.push(prod);
+      updateCart();
+      toggleCart(true);
+    }
+
+    function updateCart() {
+      document.getElementById('cart-count').innerText = cart.length;
+      const cartContainer = document.getElementById('cart-items');
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p style="text-align: center; color: var(--text-muted); margin-top: 30px;">Tu lista de consulta está vacía.</p>';
+        return;
+      }
+
+      cartContainer.innerHTML = cart.map((item, index) => `
+        <div class="cart-item">
+          <div>
+            <div class="cart-item-title">${item.title}</div>
+            <div class="cart-item-price">${item.price}</div>
+          </div>
+          <button onclick="removeFromCart(${index})" style="background: none; border: none; color: #ff5252; cursor: pointer;">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function toggleCart(openState) {
+      const drawer = document.getElementById('cart-drawer');
+      const overlay = document.getElementById('overlay');
+      if (openState === true) {
+        drawer.classList.add('open');
+        overlay.classList.add('active');
+      } else if (openState === false) {
+        drawer.classList.remove('open');
+        overlay.classList.remove('active');
+      } else {
+        drawer.classList.toggle('open');
+        overlay.classList.toggle('active');
+      }
+    }
+
+    function sendWhatsAppOrder() {
+      if (cart.length === 0) {
+        alert('Por favor elegí al menos un producto para consultar.');
+        return;
+      }
+
+      const phone = "5493536573061";
+      let message = "Hola María Jorgelina! Quisiera consultar la disponibilidad y precios de los siguientes productos de Calma Viva:\n\n";
+      cart.forEach((item, i) => {
+        message += `${i + 1}. ${item.title}\n`;
+      });
+      message += "\n¡Muchas gracias!";
+
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    // Initial Render
+    renderProducts(products);
+  </script>
+</body>
+</html>
